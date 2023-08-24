@@ -1,0 +1,7 @@
+const {Web3} = require('web3');
+const web3 = new Web3('https://mainnet.infura.io/v3/37807a1359a342edbaaeae6907214a06');
+web3.eth.getBlockNumber().then((blockNumber) => {
+  console.log('Connected to Ethereum node. Current block number:', blockNumber);
+}).catch((err) => {
+  console.error('Error connecting to Ethereum node:', err);
+});
